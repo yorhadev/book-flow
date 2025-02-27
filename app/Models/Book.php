@@ -15,4 +15,9 @@ class Book extends Model
         'registration_number',
         'status',
     ];
+
+    public function genres()
+    {
+        return $this->belongsToMany(Genre::class);
+    }
 }
